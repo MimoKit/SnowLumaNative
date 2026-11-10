@@ -52,8 +52,8 @@ node scripts/install-into-snowluma.mjs /path/to/SnowLuma
 
 | 内容 | 协议 | 说明 |
 | --- | --- | --- |
-| `native/**`、`SHA256SUMS.txt` | [SnowLuma Source-Available Non-Commercial License](LICENSE) | 原生模块是 SnowLuma 的项目产物，随主仓许可分发：仅允许非商业使用与自托管，不得发布修改版。本仓不做任何修改，只保存与分发。 |
-| `scripts/**`、`README.md` | [MIT](LICENSE-MIT) | 本仓自己写的脚本与文档。 |
+| `native/**`、`SHA256SUMS.txt` | [SnowLuma Source-Available Non-Commercial License](LICENSE-SNOWLUMA) | 原生模块是 SnowLuma 的项目产物，随主仓许可分发：仅允许非商业使用与自托管，不得发布修改版。本仓不做任何修改，只保存与分发。 |
+| `scripts/**`、`README.md` 以及仓库其余内容 | [MIT](LICENSE) | 本仓自己写的脚本与文档。 |
 
 需要商用或再分发修改版，必须另行获得 SnowLuma 作者的授权 —— 那是上游协议的约束，
 与本仓无关。
