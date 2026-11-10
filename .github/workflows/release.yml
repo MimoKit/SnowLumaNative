@@ -1,0 +1,35 @@
+name: Publish native artifacts
+
+# Publishing a tag attaches every module in native/ to a GitHub Release, so the
+# binaries stay downloadable even if this repository is ever archived.
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Verify checksums
+        run: sha256sum -c SHA256SUMS.txt
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            native/*.node
+            native/*.so
+            native/*.dll
+            native/ffmpeg/*.node
+            SHA256SUMS.txt
+          overwrite_files: true
+          draft: false
